@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #08AEEA;
+  background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+
+}
+
+.items {
+  overflow-y: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+  perspective: 500px;
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  padding: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  user-select: none;
+  transition: all 0.2s;
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+.item {
+  height: calc(100% - 40px);
+  width: 300px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border: 10px solid rgba(0, 0, 0, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 60px;
+}
+
+.items.active {
+  cursor: -webkit-grabbing;
+  transform: scale(1);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+
+.item:nth-child(5n+1) {background-color: #C9E4CA;}
+.item:nth-child(5n+2) {background-color: #87BBA2;}
+.item:nth-child(5n+3) {background-color: #55828B;}
+.item:nth-child(5n+4) {background-color: #3B6064;}
+.item:nth-child(5n+5) {background-color: #364958;}
+
+.item:nth-child(odd) {transform: rotateY(-35deg) scaleX(1.24);}
+.item:nth-child(even) {transform: rotateY(35deg) scaleX(1.24);}
